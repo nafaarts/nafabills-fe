@@ -11,8 +11,10 @@ const Sidebar = ({ activeMenu }) => {
         <div className="w-60 h-screen bg-zinc-800 px-8 flex flex-col justify-between" id="sidebar">
             <div className="content">
                 <SidebarBrand />
-                <button className="p-2 text-center bg-orange-400 text-white w-full rounded-md text-xs flex items-center justify-center mb-5">
-                    <FontAwesomeIcon icon={faPlus} className="mr-1" /> Create Invoice</button>
+                <Link to="/invoice/create">
+                    <button className="p-2 text-center bg-orange-400 text-white w-full rounded-md text-xs flex items-center justify-center mb-5">
+                        <FontAwesomeIcon icon={faPlus} className="mr-1" /> Create Invoice</button>
+                </Link>
                 <SidebarLink isActive={activeMenu === "dashboard"} to="/" icon={faDashboard} label="Dashboard" />
                 <SidebarLink isActive={activeMenu === "invoices"} to="/invoices" icon={faFileInvoice} label="Invoices" />
                 <SidebarLink isActive={activeMenu === "clients"} to="/clients" icon={faBusinessTime} label="Clients" />

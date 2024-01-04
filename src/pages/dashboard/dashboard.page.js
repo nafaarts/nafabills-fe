@@ -1,5 +1,5 @@
 import React from 'react'
-import Layout from '../components/layout.component'
+import Layout from '../../components/layout.component'
 
 const DashboardPage = () => {
     return (
